@@ -50,6 +50,22 @@ const scm=new mongoose.Schema({
         type: String,
         default: new Date().toLocaleString()
     },
+    hno: {
+        type: String
+    },
+    area: {
+        type: String
+    },
+    pin: {
+        type: String
+    },
+    cod: {
+        type: String
+    },
+    city: {
+        type: String
+    }
+
 })
 scm.plugin(unival)
 

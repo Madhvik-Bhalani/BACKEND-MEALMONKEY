@@ -1,9 +1,6 @@
 const mongoose = require("mongoose")
 
 
-var d1 = new Date(),
-    d2 = new Date(d1);
-d2.setMinutes(d1.getMinutes() + 30);
 const scm = new mongoose.Schema({
     userid: {
         type: mongoose.Schema.Types.ObjectId,
@@ -43,41 +40,15 @@ const scm = new mongoose.Schema({
     cartamt: {
         type: Number
     },
-    hno: {
-        type: String
-    },
-    area: {
-        type: String
-    },
-    landmark: {
-        type: String
-    },
-    cod: {
-        type: String
-    },
-    city: {
-        type: String
-    },
-    rno: {
-        type: String,
-        default: Math.random().toString(36).substr(2)
-    },
-    vno: {
-        type: Number,
-        default: Math.ceil(Math.random() * 1000000)
-    },
-    date: {
-
-        type: String,
-        default: new Date().toLocaleDateString()
+    
+    onum:{
+        type:String,
     },
     ordertime: {
-        type:String,
-        default:d1.toLocaleTimeString()
+        type: String,
     },
     deliverytime: {
-        type:String,
-        default:d2.toLocaleTimeString() 
+        type: String,
     }
 
 

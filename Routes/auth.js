@@ -71,7 +71,6 @@ router.post("/changepass", validuser, async (req, res) => {
         data = await upmodel.findOne({ _id: req.id })
 
         valid = await bcrypt.compare(req.body.opass, data.pass)
-        console.log(valid);
         if (valid) {
             if (req.body.npass === req.body.rpass) {
                 newpass = await bcrypt.hash(req.body.npass, 10)
