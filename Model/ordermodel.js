@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
 const scm = new mongoose.Schema({
     userid: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "signup"
+        ref: "user"
     },
     name: {
         type: String,
@@ -55,5 +55,5 @@ const scm = new mongoose.Schema({
 
 })
 
-const ordermodel = new mongoose.model("your order", scm)
+const ordermodel = new mongoose.model("order", scm)
 module.exports = ordermodel

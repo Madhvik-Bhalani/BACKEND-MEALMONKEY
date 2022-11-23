@@ -90,6 +90,6 @@ scm.methods.gentoken=async function(){
         console.log(`json token genrate err`+error);
     }
 }
-const upmodel=new mongoose.model("signup",scm)
+const upmodel=new mongoose.model("user",scm)
 
 module.exports=upmodel;

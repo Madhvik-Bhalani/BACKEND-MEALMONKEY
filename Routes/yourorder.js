@@ -7,8 +7,8 @@ const upmodel = require("../Model/upmodel")
 
 router.post("/", validuser, async (req, res) => {
     try {
-        if (req.body.cod === "") {
-            res.status(400).json("please select your payment mode")
+        if (req.body.cod === ""||req.body.city===""||req.body.hno===""||req.body.area===""||req.body.pin==="") {
+            res.status(400).json("All Fields Are Required")
         } else {
             
                 const cartdata = await cartmodel.find({ userid: req.id })

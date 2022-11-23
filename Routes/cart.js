@@ -85,7 +85,7 @@ router.post("/plus", validuser, async (req, res) => {
             const fdata = await cartmodel.findByIdAndUpdate({ _id: req.body.id }, { $set: { price: (udata.quantity * fooditem.price) } }, { new: true }) //update price with updated qty
 
             let tdata = await cartmodel.find({ userid: req.id })
-            // console.log("tdata"+tdata);\
+            // console.log("tdata"+tdata);
             let newdata = tdata.reduce((accum, elem) => {
                 let val = elem.price
                 return accum + val

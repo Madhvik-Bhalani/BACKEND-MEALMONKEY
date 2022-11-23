@@ -21,7 +21,7 @@ router.post("/signup", async (req, res) => {
             await upmodel.updateOne({ email: req.body.email }, { $set: { token: token } }, { new: true })
             res.status(201).json(token)
         } else {
-            res.status(400).json("detail does not match" )
+            res.status(400).json("password and confirm password does not match" )
         }
     } catch (error) {
         res.status(400).json(error.message)
